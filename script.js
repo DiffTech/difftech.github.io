@@ -1,3 +1,6 @@
+// Define the company name
+const companyName = 'DiffTech';
+
 // Function to load external HTML
 function loadNavBar() {
     const xhr = new XMLHttpRequest();
@@ -12,7 +15,7 @@ function loadNavBar() {
 }
 
 // Function to generate the navigation links and content sections dynamically
-// change the order here if you want to reorder 
+// Change the order here if you want to reorder the subheadings and content
 function generateNavLinks() {
     const sections = [
         { id: 'projects', title: 'Projects', content: 'Details about your projects...' },
@@ -48,6 +51,12 @@ function generateNavLinks() {
             nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
         }
     });
+
+    // Set the company name dynamically in the hero section
+    const heroTitle = document.querySelector('.hero-content h1');
+    if (heroTitle) {
+        heroTitle.textContent = companyName;
+    }
 }
 
 // Load the navigation bar when the page loads
