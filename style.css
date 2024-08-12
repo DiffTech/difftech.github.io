@@ -89,6 +89,87 @@ nav.scrolled ul li.logo {
     font-size: 4rem;
 }
 
+/* Slideshow Section */
+#slideshow {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+}
+
+/* Additional Information Section */
+#additional-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.info-left {
+    width: 60%;
+}
+
+.info-left ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-left li {
+    margin-bottom: 10px;
+}
+
+.info-left a {
+    text-decoration: none;
+    color: #333;
+}
+
+.info-right {
+    width: 35%;
+    text-align: right;
+}
+
+.info-right img {
+    max-width: 100%;
+    height: auto;
+}
+
+.info-right p {
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+/* Fade Animation for Slideshow */
+.fade {
+    animation: fade 2s ease-in-out infinite;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    20% { opacity: 1; }
+    80% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 /* Content Sections */
 section {
     padding: 100px 50px;
