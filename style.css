@@ -31,10 +31,21 @@ nav ul {
     align-items: center;
     list-style: none;
     width: 100%;
-    max-width: 1200px; /* Adjust max-width as needed */
+    max-width: 200px; /* Adjust max-width as needed */
+}
+
+/* Ensure nav items are clickable */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
 }
 
 nav ul li {
+    margin: 0;
+    padding: 0;
+    position: relative;
     flex: 1;
     text-align: center;
 }
@@ -43,13 +54,15 @@ nav ul li a {
     display: block;
     color: #fff;
     text-decoration: none;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.3); /* Background for visibility */
     font-size: 1.2rem;
-    padding: 20px 0;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+
 nav ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5); /* Darken background on hover */
     color: #fff;
     border-radius: 0;
 }
