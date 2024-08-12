@@ -9,6 +9,8 @@ function loadNavBar() {
         if (xhr.readyState === 4 && xhr.status === 200) {
             document.querySelector('body').insertAdjacentHTML('afterbegin', xhr.responseText);
             generateNavLinks(); // Generate the navigation links after loading the nav HTML
+        } else if (xhr.readyState === 4) {
+            console.error('Failed to load nav.html', xhr.status, xhr.statusText);
         }
     };
     xhr.send();
@@ -24,6 +26,10 @@ function generateNavLinks() {
     ];
 
     const navLinks = document.getElementById('nav-links');
+    if (!navLinks) {
+        console.error('Navigation links container not found');
+        return;
+    }
 
     sections.forEach((section, index) => {
         // Insert the logo before the "Our Story" section
@@ -43,13 +49,14 @@ function generateNavLinks() {
     // Change nav background on scroll and show logo
     window.addEventListener('scroll', function () {
         const nav = document.querySelector('nav');
-        
-        if (window.scrollY > 100) {
-            nav.classList.add('scrolled');
-            nav.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-        } else {
-            nav.classList.remove('scrolled');
-            nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+        if (nav) {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+                nav.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            } else {
+                nav.classList.remove('scrolled');
+                nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+            }
         }
     });
 
