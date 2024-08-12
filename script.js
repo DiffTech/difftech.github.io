@@ -1,4 +1,6 @@
 // Define the sections and their order
+// Use this to change the order of the Subheadings and the content seen on the website
+
 const sections = [
     { id: 'projects', title: 'Projects', content: 'Details about your projects...' },
     { id: 'engineering', title: 'Engineering', content: 'Details about your engineering...' },
