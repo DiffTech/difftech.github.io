@@ -15,7 +15,6 @@ function loadNavBar() {
 }
 
 // Function to generate the navigation links and content sections dynamically
-// Change the order here if you want to reorder the subheadings and content
 function generateNavLinks() {
     const sections = [
         { id: 'projects', title: 'Projects', content: 'Details about your projects...' },
@@ -27,14 +26,16 @@ function generateNavLinks() {
     const navLinks = document.getElementById('nav-links');
 
     sections.forEach((section, index) => {
-        // Create the navigation link
-        const navItem = document.createElement('li');
-        if (index === 2) { // Insert the logo before the "Our Story" section
+        // Insert the logo before the "Our Story" section
+        if (index === 2) {
             const logoItem = document.createElement('li');
             logoItem.classList.add('logo');
-            logoItem.innerHTML = '<img src="assets/logo.png" alt="Logo">';
+            logoItem.innerHTML = '<a href="index.html"><img src="assets/logo.png" alt="Logo"></a>';
             navLinks.appendChild(logoItem);
         }
+
+        // Create the navigation link
+        const navItem = document.createElement('li');
         navItem.innerHTML = `<a href="${section.id}.html">${section.title}</a>`;
         navLinks.appendChild(navItem);
     });
@@ -52,10 +53,14 @@ function generateNavLinks() {
         }
     });
 
-    // Set the company name dynamically in the hero section
-    const heroTitle = document.querySelector('.hero-content h1');
+    // Set the company name dynamically in the hero section and title
+    const heroTitle = document.querySelector('#projects h1');
+    const pageTitle = document.querySelector('title');
     if (heroTitle) {
         heroTitle.textContent = companyName;
+    }
+    if (pageTitle) {
+        pageTitle.textContent = `Projects - ${companyName}`;
     }
 }
 
