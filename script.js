@@ -54,13 +54,14 @@ function generateNavLinks() {
     });
 
     // Set the company name dynamically in the hero section and title
-    const heroTitle = document.querySelector('#projects h1');
+    const heroTitle = document.querySelector('#hero h1');
     const pageTitle = document.querySelector('title');
+    
     if (heroTitle) {
         heroTitle.textContent = companyName;
     }
     if (pageTitle) {
-        pageTitle.textContent = `Projects - ${companyName}`;
+        pageTitle.textContent = `Home - ${companyName}`;
     }
 }
 
