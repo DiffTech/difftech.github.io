@@ -15,25 +15,33 @@ body {
 nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0); /* Initially transparent */
     transition: background 0.3s ease;
-    z-index: 1000;
+    z-index: 1000; /* Ensure the nav bar is on top */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80px; /* Adjust height as needed */
 }
 
+/* Ensure other sections don't overlap the navbar */
+#hero, #slideshow, #additional-info, section {
+    position: relative;
+    z-index: 1; /* Ensure other sections are below the nav bar */
+}
+
+/* Navigation Links */
 nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    width: 100%;
-    max-width: 1200px; /* Adjust max-width as needed */
     padding: 0;
     margin: 0;
+    width: 100%;
+    max-width: 1200px; /* Adjust max-width as needed */
 }
 
 nav ul li {
