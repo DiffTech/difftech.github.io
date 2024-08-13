@@ -8,7 +8,6 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
 }
 
 /* Navigation Bar */
@@ -41,7 +40,7 @@ nav ul {
     padding: 0;
     margin: 0;
     width: 100%;
-    max-width: 1200px; /* Adjust max-width as needed */
+    max-width: 800px; /* Adjust max-width as needed */
 }
 
 nav ul li {
@@ -58,7 +57,7 @@ nav ul li a {
     text-decoration: none;
     padding: 20px 30px; /* Increase padding for larger clickable area */
     background: rgba(0, 0, 0, 0.3); /* Background for visibility */
-    font-size: 1.2rem;
+    font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
