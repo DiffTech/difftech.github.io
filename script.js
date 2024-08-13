@@ -68,7 +68,7 @@ function generateNavLinks() {
         heroTitle.textContent = companyName;
     }
     if (pageTitle) {
-        pageTitle.textContent = `Home - ${companyName}`;
+        pageTitle.textContent = `${section.id} - ${companyName}`;
     }
 }
 
