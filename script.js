@@ -20,8 +20,8 @@ function loadNavBar() {
 function generateNavLinks() {
     const sections = [
         { id: 'projects', title: 'Projects', content: 'Details about your projects...' },
-        { id: 'engineering', title: 'Engineering', content: 'Details about your engineering...' },
-        { id: 'our-story', title: 'Our Story', content: 'Details about your company\'s story...' },
+        { id: 'eng', title: 'Engineering', content: 'Details about your engineering...' },
+        { id: 'os', title: 'Our Story', content: 'Details about your company\'s story...' },
         { id: 'contact-us', title: 'Contact Us', content: 'Contact information...' },
     ];
 
