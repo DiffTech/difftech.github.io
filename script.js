@@ -19,10 +19,10 @@ function loadNavBar() {
 // Function to generate the navigation links and content sections dynamically
 function generateNavLinks() {
     const sections = [
-        { id: 'projects', title: 'Projects', content: 'Details about your projects...' },
-        { id: 'eng', title: 'Engineering', content: 'Details about your engineering...' },
-        { id: 'os', title: 'Our Story', content: 'Details about your company\'s story...' },
-        { id: 'contact-us', title: 'Contact Us', content: 'Contact information...' },
+        { id: 'projects', title: 'Projects' },
+        { id: 'eng', title: 'Engineering' },
+        { id: 'os', title: 'Our Story' },
+        { id: 'contact-us', title: 'Contact Us' },
     ];
 
     const navLinks = document.getElementById('nav-links');
@@ -46,7 +46,7 @@ function generateNavLinks() {
         navLinks.appendChild(navItem);
     });
 
-    // Change nav background on scroll and show logo
+    // Adjust nav bar behavior on scroll
     window.addEventListener('scroll', function () {
         const nav = document.querySelector('nav');
         if (nav) {
@@ -68,7 +68,7 @@ function generateNavLinks() {
         heroTitle.textContent = companyName;
     }
     if (pageTitle) {
-        pageTitle.textContent = `${section.id} - ${companyName}`;
+        pageTitle.textContent = `Projects - ${companyName}`; // Ensure title is set for each section dynamically
     }
 }
 
