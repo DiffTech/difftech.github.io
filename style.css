@@ -56,11 +56,12 @@ nav ul li a {
     display: block;
     color: #fff;
     text-decoration: none;
-    padding: 20px;
+    padding: 20px 30px; /* Increase padding for larger clickable area */
     background: rgba(0, 0, 0, 0.3); /* Background for visibility */
     font-size: 1.2rem;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
+
 
 nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.5); /* Darken background on hover */
@@ -79,6 +80,12 @@ nav ul li.logo img {
 /* Show the logo when scrolled down */
 nav.scrolled ul li.logo {
     display: block;
+}
+
+/* Ensure other sections are below the nav bar */
+#hero, #slideshow, #additional-info, section {
+    position: relative;
+    z-index: 1; /* Ensure other sections are below the nav bar */
 }
 
 /* Hero Section */
