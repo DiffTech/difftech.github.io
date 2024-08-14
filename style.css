@@ -68,7 +68,7 @@ nav ul li.logo {
     flex: 0 0 60px; /* Fixed width for logo space, same as nav height */
     display: none; /* Hidden initially */
     height: 60px; /* Ensure logo container height matches nav */
-    background-color: rgba(1, 1, 1, 1); /* Background color if needed */
+    background-color: rgba(0, 0, 0, 0); /* Background color if needed */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +82,7 @@ nav ul li.logo img {
 
 /* Show the logo when scrolled down */
 nav.scrolled ul li.logo {
-    display: flex; /* Show the logo when scrolled */
+    display: block; /* Show the logo when scrolled */
 }
 
 /* Other Sections */
