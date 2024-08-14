@@ -1,7 +1,7 @@
 // Define the company name
 const companyName = 'DiffTech';
 
-// Function to load external HTML
+// Function to load external HTML (if needed)
 function loadNavBar() {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', 'nav.html', true);
@@ -19,10 +19,10 @@ function loadNavBar() {
 // Function to generate the navigation links and content sections dynamically
 function generateNavLinks() {
     const sections = [
-        { id: 'projects', title: 'Projects' },
-        { id: 'eng', title: 'Engineering' },
-        { id: 'os', title: 'Our Story' },
-        { id: 'contact-us', title: 'Contact Us' },
+        { id: 'projects', title: 'Projects', content: 'Details about your projects...' },
+        { id: 'eng', title: 'Engineering', content: 'Details about your engineering...' },
+        { id: 'os', title: 'Our Story', content: 'Details about your company\'s story...' },
+        { id: 'contact-us', title: 'Contact Us', content: 'Contact information...' },
     ];
 
     const navLinks = document.getElementById('nav-links');
@@ -46,7 +46,7 @@ function generateNavLinks() {
         navLinks.appendChild(navItem);
     });
 
-    // Adjust nav bar behavior on scroll
+    // Change nav background on scroll and show logo
     window.addEventListener('scroll', function () {
         const nav = document.querySelector('nav');
         if (nav) {
@@ -59,18 +59,7 @@ function generateNavLinks() {
             }
         }
     });
-
-    // Set the company name dynamically in the hero section and title
-    const heroTitle = document.querySelector('#hero h1');
-    const pageTitle = document.querySelector('title');
-    
-    if (heroTitle) {
-        heroTitle.textContent = companyName;
-    }
-    if (pageTitle) {
-        pageTitle.textContent = `${section.id} - ${companyName}`; // Ensure title is set for each section dynamically
-    }
 }
 
-// Load the navigation bar when the page loads
-window.addEventListener('DOMContentLoaded', loadNavBar);
+// Call the function to load the navigation bar
+loadNavBar();
