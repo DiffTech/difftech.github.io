@@ -51,7 +51,7 @@ nav ul li {
 
 nav ul li a {
     display: block;
-    color: #fff;
+    color: #404040;
     text-decoration: none;
     padding: 20px 10px; /* Increase padding for larger clickable area */
     background: rgba(0, 0, 0, 0.3); /* Background for visibility */
@@ -61,7 +61,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.5); /* Darken background on hover */
-    color: #fff;
+    color: #D3D3D3;
 }
 
 nav ul li.logo {
