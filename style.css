@@ -65,7 +65,8 @@ nav ul li a:hover {
 }
 
 nav ul li.logo {
-    flex: 0 0 80px; /* Fixed width for logo space */
+    flex: 0 0 80px; /* Fixed width for logo space */    
+    background-color: rgba(1, 1, 1, 1);
     display: none; /* Hidden initially */
 }
 
