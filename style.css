@@ -69,6 +69,7 @@ nav ul li a:hover {
 
 nav ul li.logo {
     flex: 0 0 80px; /* Fixed width for logo space */
+    background-color: rgba(1, 1, 1, 1); /* background of the centre logo is white */
     display: none; /* Hidden initially */
 }
 
@@ -89,7 +90,7 @@ nav.scrolled ul li.logo {
 
 /* Hero Section */
 #hero {
-    background: url('assets/your-background-image.jpg') no-repeat center center/cover;
+    background: url('assets/heroimage.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
