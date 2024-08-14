@@ -24,6 +24,8 @@ nav {
     transition: background 0.3s ease;
     z-index: 1000; /* Ensure the nav bar is on top */
     display: flex;
+    padding: 0px 10px;
+    color: #404040; /* Text color of the nav bar */
     justify-content: center;
     align-items: center;
     height: 60px; /* Adjust height as needed */
@@ -34,7 +36,6 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -53,15 +54,16 @@ nav ul li a {
     display: block;
     color: #404040;
     text-decoration: none;
-    padding: 20px 10px; /* Increase padding for larger clickable area */
+    padding: 5px 10px; /* Increase padding for larger clickable area */
     background: rgba(0, 0, 0, 0.3); /* Background for visibility */
     font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
 }
 
 nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.5); /* Darken background on hover */
-    color: #D3D3D3;
+    color: #404040; /* Text color on hover */
 }
 
 nav ul li.logo {
