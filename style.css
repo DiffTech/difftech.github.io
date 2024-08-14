@@ -55,7 +55,7 @@ nav ul li a {
     display: block;
     color: #fff;
     text-decoration: none;
-    padding: 20px 30px; /* Increase padding for larger clickable area */
+    padding: 10px 10px; /* Increase padding for larger clickable area */
     background: rgba(0, 0, 0, 0.3); /* Background for visibility */
     font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
