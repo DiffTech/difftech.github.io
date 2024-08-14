@@ -68,7 +68,7 @@ function generateNavLinks() {
         heroTitle.textContent = companyName;
     }
     if (pageTitle) {
-        pageTitle.textContent = `Projects - ${companyName}`; // Ensure title is set for each section dynamically
+        pageTitle.textContent = `${section.id} - ${companyName}`; // Ensure title is set for each section dynamically
     }
 }
 
