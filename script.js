@@ -1,65 +1,129 @@
-// Define the company name
-const companyName = 'DiffTech';
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize navigation
+    initializeNavigation();
+    
+    // Initialize scroll animations
+    initializeScrollAnimations();
+    
+    // Initialize projects
+    loadProjects();
+});
 
-// Function to load external HTML (if needed)
-function loadNavBar() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'nav.html', true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-            document.querySelector('body').insertAdjacentHTML('afterbegin', xhr.responseText);
-            generateNavLinks(); // Generate the navigation links after loading the nav HTML
-        } else if (xhr.readyState === 4) {
-            console.error('Failed to load nav.html', xhr.status, xhr.statusText);
-        }
-    };
-    xhr.send();
-}
-
-// Function to generate the navigation links and content sections dynamically
-function generateNavLinks() {
+function initializeNavigation() {
     const sections = [
-        { id: 'projects', title: 'Projects', content: 'Details about your projects...' },
-        { id: 'eng', title: 'Engineering', content: 'Details about your engineering...' },
-        { id: 'os', title: 'Our Story', content: 'Details about your company\'s story...' },
-        { id: 'contact-us', title: 'Contact Us', content: 'Contact information...' },
+        { id: 'projects', title: 'Projects' },
+        { id: 'eng', title: 'Engineering' },
+        { id: 'home', title: '', isLogo: true },
+        { id: 'os', title: 'Our Story' },
+        { id: 'contact-us', title: 'Contact' },
     ];
 
     const navLinks = document.getElementById('nav-links');
-    if (!navLinks) {
-        console.error('Navigation links container not found');
-        return;
-    }
+    if (!navLinks) return;
 
-    sections.forEach((section, index) => {
-        // Insert the logo before the "Our Story" section
-        if (index === 2) {
-            const logoItem = document.createElement('li');
-            logoItem.classList.add('logo');
-            logoItem.innerHTML = '<a href="index.html"><img src="assets/logo.png" alt="Logo"></a>';
-            navLinks.appendChild(logoItem);
-        }
-
-        // Create the navigation link
+    sections.forEach(section => {
         const navItem = document.createElement('li');
-        navItem.innerHTML = `<a href="${section.id}.html">${section.title}</a>`;
+        if (section.isLogo) {
+            navItem.classList.add('logo');
+            navItem.innerHTML = '<a href="index.html"><img src="assets/logo.png" alt="DiffTech Logo"></a>';
+        } else {
+            navItem.innerHTML = `<a href="${section.id}.html">${section.title}</a>`;
+        }
         navLinks.appendChild(navItem);
     });
 
-    // Change nav background on scroll and show logo
-    window.addEventListener('scroll', function () {
+    // Handle navigation background on scroll
+    let lastScroll = 0;
+    window.addEventListener('scroll', function() {
         const nav = document.querySelector('nav');
-        if (nav) {
-            if (window.scrollY > 100) {
-                nav.classList.add('scrolled');
-                nav.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-            } else {
-                nav.classList.remove('scrolled');
-                nav.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-            }
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            nav.style.background = 'rgba(255, 255, 255, 0.8)';
+            nav.style.backdropFilter = 'blur(20px)';
+        } else {
+            nav.style.background = 'rgba(255, 255, 255, 1)';
+            nav.style.backdropFilter = 'none';
         }
+
+        if (currentScroll > lastScroll) {
+            nav.style.transform = 'translateY(-100%)';
+        } else {
+            nav.style.transform = 'translateY(0)';
+        }
+        
+        lastScroll = currentScroll;
     });
 }
 
-// Call the function to load the navigation bar
-loadNavBar();
+function initializeScrollAnimations() {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe all elements with animation classes
+    document.querySelectorAll('.fade-up, .feature-item').forEach(element => {
+        observer.observe(element);
+    });
+}
+
+function loadProjects() {
+    const projects = [
+        {
+            title: 'Project Alpha',
+            description: 'Innovative solution for modern challenges',
+            image: 'assets/project1.jpg'
+        },
+        {
+            title: 'Project Beta',
+            description: 'Pushing technological boundaries',
+            image: 'assets/project2.jpg'
+        },
+        {
+            title: 'Project Gamma',
+            description: 'Next-generation development',
+            image: 'assets/project3.jpg'
+        }
+    ];
+
+    const projectsContainer = document.querySelector('.projects-container');
+    if (!projectsContainer) return;
+
+    projects.forEach(project => {
+        const projectElement = document.createElement('div');
+        projectElement.classList.add('project-card', 'fade-up');
+        projectElement.innerHTML = `
+            <div class="project-image">
+                <img src="${project.image}" alt="${project.title}">
+            </div>
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+        `;
+        projectsContainer.appendChild(projectElement);
+    });
+}
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});

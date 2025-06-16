@@ -5,51 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DiffTech</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <!-- Navigation Bar -->
     <nav>
-        <ul id="nav-links">
-            <!-- Navigation links will be dynamically generated here -->
-        </ul>
+        <div class="nav-container">
+            <ul id="nav-links">
+                <!-- Navigation links will be dynamically generated here -->
+            </ul>
+        </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="hero">
         <div class="hero-content">
-            <h1></h1> <!-- The company name will be inserted here -->
-            
-        </div>
-    </section>
-
-    <!-- Slideshow Section -->
-    <section id="slideshow">
-        <div class="slides">
-            <div class="slide fade">
-                <img src="assets/slide1.jpg" alt="Slide 1">
-            </div>
-            <div class="slide fade">
-                <img src="assets/slide2.jpg" alt="Slide 2">
-            </div>
-            <div class="slide fade">
-                <img src="assets/slide3.jpg" alt="Slide 3">
+            <h1 class="fade-in">DiffTech</h1>
+            <p class="subtitle fade-in-delayed">Making technology different</p>
+            <div class="cta-container fade-in-delayed-more">
+                <a href="#learn-more" class="cta-button">Learn More</a>
             </div>
         </div>
     </section>
 
-    <!-- Additional Information Section -->
-    <section id="additional-info">
-        <div class="info-left">
-            <ul id="info-links">
-                <!-- Hyperlinks will be dynamically generated here -->
-            </ul>
-        </div>
-        <div class="info-right">
-            <img src="assets/alternative-logo.png" alt="Alternative Logo">
-            <p>Additional information about the company or services...</p>
+    <!-- Features Section -->
+    <section id="features">
+        <div class="features-grid">
+            <div class="feature-item fade-up">
+                <h2>Innovation</h2>
+                <p>Pushing boundaries with cutting-edge solutions</p>
+            </div>
+            <div class="feature-item fade-up">
+                <h2>Excellence</h2>
+                <p>Crafting perfection in every project</p>
+            </div>
+            <div class="feature-item fade-up">
+                <h2>Impact</h2>
+                <p>Creating meaningful change through technology</p>
+            </div>
         </div>
     </section>
+
+    <!-- Latest Projects -->
+    <section id="latest-projects">
+        <h2 class="section-title">Latest Projects</h2>
+        <div class="projects-container">
+            <!-- Projects will be dynamically generated here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="contact-content">
+            <h2>Let's Work Together</h2>
+            <p>Ready to start your next project?</p>
+            <a href="contact-us.html" class="contact-button">Get in Touch</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/logo.png" alt="DiffTech Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="eng.html">Engineering</a></li>
+                    <li><a href="os.html">Our Story</a></li>
+                    <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <!-- Add your social media links here -->
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 DiffTech. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
