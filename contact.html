@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - DiffTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="global-nav">
+        <div class="nav-content">
+            <a href="/" class="nav-logo">
+                <img src="assets/DifftechLogo.png" alt="DiffTech" />
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/projects.html">Projects</a></li>
+                <li><a href="/engineering.html">Engineering</a></li>
+                <li><a href="/our-story.html">Our Story</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero contact-hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Get in Touch</h1>
+            <h2 class="hero-subtitle">Let's discuss your next project</h2>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="feature-section">
+        <div class="feature-content">
+            <div class="contact-form-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="button-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Locations -->
+    <section class="projects-section">
+        <div class="projects-content">
+            <h2 class="section-title">Our Offices</h2>
+            <p class="section-description">Find us around the globe</p>
+            
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Headquarters</h3>
+                    <p>123 Tech Avenue<br>Silicon Valley, CA 94025<br>United States</p>
+                </article>
+                
+                <article class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Europe Office</h3>
+                    <p>45 Innovation Street<br>London, EC2A 4NE<br>United Kingdom</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <img src="assets/DifftechLogo.png" alt="DiffTech" class="footer-logo">
+                    <p>Making technology different</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/projects.html">Projects</a></li>
+                        <li><a href="/engineering.html">Engineering</a></li>
+                        <li><a href="/our-story.html">Our Story</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Connect</h4>
+                    <ul class="social-links">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DiffTech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -339,16 +339,170 @@ nav.scrolled ul li.logo {
 }
 
 /* Contact Section */
-#contact {
-    background-color: var(--background-dark);
-    color: var(--background-light);
+.contact-section {
     padding: 100px 20px;
+    background-color: #f5f5f7;
     text-align: center;
 }
 
 .contact-content {
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* Contact Form */
+.contact-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    color: #1d1d1f;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+/* Page-specific Hero Backgrounds */
+.engineering-hero {
+    background: linear-gradient(to bottom, #000428, #004e92);
+    color: white;
+}
+
+.story-hero {
+    background: linear-gradient(to bottom, #2c3e50, #3498db);
+    color: white;
+}
+
+.contact-hero {
+    background: linear-gradient(to bottom, #134e5e, #71b280);
+    color: white;
+}
+
+.projects-hero {
+    background: linear-gradient(to bottom, #1a2a6c, #b21f1f);
+    color: white;
+}
+
+/* Featured Project */
+.featured-project {
+    margin-top: 48px;
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.featured-project-image {
+    height: 400px;
+    background-color: #f5f5f7;
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-project-content {
+    padding: 32px;
+}
+
+.featured-project-content h3 {
+    font-size: 32px;
+    margin-bottom: 16px;
+}
+
+.featured-project-content p {
+    font-size: 18px;
+    color: #86868b;
+    margin-bottom: 24px;
+}
+
+/* Project Filters */
+.projects-filter {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 32px;
+    justify-content: center;
+}
+
+.filter-button {
+    padding: 8px 16px;
+    border: 1px solid #d2d2d7;
+    border-radius: 980px;
+    background: none;
+    font-size: 14px;
+    color: #1d1d1f;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-button:hover {
+    background-color: #f5f5f7;
+}
+
+.filter-button.active {
+    background-color: #0066cc;
+    color: white;
+    border-color: #0066cc;
+}
+
+/* Project Cards Enhancements */
+.project-category {
+    font-size: 12px;
+    color: #0066cc;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 24px 8px;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0 24px 16px;
+}
+
+.tech-tag {
+    font-size: 12px;
+    padding: 4px 8px;
+    background-color: #f5f5f7;
+    border-radius: 4px;
+    color: #515154;
+}
+
+.engineering-hero .hero-subtitle,
+.story-hero .hero-subtitle,
+.contact-hero .hero-subtitle {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .contact-content h2 {
