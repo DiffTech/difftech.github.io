@@ -31,23 +31,62 @@ body, html {
 }
 
 /* Navigation Bar */
-nav {
+.global-nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     width: 100%;
-    background: transparent;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    transition: all var(--transition-speed) ease;
+    transition: all 0.3s ease;
     z-index: 1000;
     border-bottom: 1px solid rgba(0, 0, 0, 0.03);
 }
 
-.nav-container {
-    width: 100%;
-    margin: 0;
+.nav-content {
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 22px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 8px 0;
+}
+
+.nav-logo img {
+    height: 20px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    height: 100%;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #1d1d1f;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    padding: 8px 0;
+}
+
+.nav-links a:hover {
+    color: #0066cc;
+}
     padding: 0 22px;
     height: 44px;
     display: flex;
