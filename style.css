@@ -64,7 +64,7 @@ body, html {
 }
 
 .nav-logo img {
-    height: 20px;
+    height: 28px;
     width: auto;
 }
 
@@ -87,29 +87,11 @@ body, html {
 .nav-links a:hover {
     color: #0066cc;
 }
-    padding: 0 22px;
-    height: 44px;
-    display: flex;
-    justify-content: center;
-}
 
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    gap: 0;
-    width: 100%;
-    max-width: none;
-}
-
-nav ul li {
-    height: 100%;
-    display: flex;
-    align-items: center;
+.footer-logo {
+    height: 30px;
+    width: auto;
+    margin-bottom: 16px;
 }
 
 nav ul li a {
@@ -145,7 +127,7 @@ nav ul li.logo a:hover {
 }
 
 nav ul li.logo img {
-    height: 20px;
+    height: 24px;
     width: auto;
 }
 
@@ -173,14 +155,14 @@ nav ul li a {
     color: #404040;
     text-decoration: none;
     padding: 5px 10px; /* Increase padding for larger clickable area */
-    background: rgba(0, 0, 0, 0.3); /* Background for visibility */
+    background: transparent; /* Background for visibility */
     font-size: 1rem;
     transition: background-color 0.3s ease, color 0.3s ease;
     display: inline-block;
 }
 
 nav ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.5); /* Darken background on hover */
+    background-color: transparent; /* Darken background on hover */
     color: #404040; /* Text color on hover */
 }
 
