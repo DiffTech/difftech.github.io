@@ -522,8 +522,9 @@ nav.scrolled ul li.logo {
 
 .engineering-hero .hero-subtitle,
 .story-hero .hero-subtitle,
-.contact-hero .hero-subtitle {
-    color: rgba(255, 255, 255, 0.9);
+.contact-hero .hero-subtitle,
+.projects-hero .hero-subtitle {
+    color: rgba(255, 255, 255, 0.95);
 }
 
 .contact-content h2 {
