@@ -971,3 +971,8 @@ section:not(#hero) p {
         grid-template-columns: 1fr;
     }
 }
+
+.hero {
+    padding-top: 50vh;
+    transform: translateY(-50%);
+}
